@@ -1,0 +1,23 @@
+
+public class Program {
+
+	public static void main(String[] args) {
+		//different numbers
+		int [] nums = {90, 100, 101, 78, 102};
+		int i, biggest;
+		
+		biggest = nums[0];
+		i = 1;
+		
+		//finds the biggest number
+		while(i < nums.length) {
+			if(nums[i] > biggest)
+				biggest = nums[i];
+			i = i + 1;
+		}
+		
+		System.out.println(biggest);
+
+	}
+
+}
