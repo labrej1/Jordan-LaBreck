@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class Program {
+
+	public static void main(String[] args) {
+		String [] counties ={"Arkansas", "Ashley\t", "Baxter\t", "Benton\t", "Boone\t", "Bradley\t", "Calhoun\t", 
+				"Carroll\t", "Chicot\t", "Clark\t", "Clay\t", "Cleburne", "Cleveland", "Columbia", "Conway\t", 
+				"Craighead", "Crawford", "Crittenden", "Cross\t", "Dallas\t", "Desha\t", "Drew\t", "Faulkner",
+				"Franklin", "Fulton\t", "Garland\t", "Grant\t", "Greene\t", "Hempstead", "Hot Spring", "Howard\t",
+				"Independence", "Izard\t", "Jackson\t", "Jefferson", "Johnson\t", "Lafayette", "Lawrence", "Lee\t",
+				"Lincoln\t", "Little River", "Logan\t", "Lonoke\t", "Madison\t", "Marion\t", "Miller\t", "Mississippi",
+				"Monroe\t", "Montgomery", "Nevada\t", "Newton\t", "Ouachita", "Perry\t", "Phillips", "Pike\t",
+				"Poinsett", "Polk\t", "Pope\t", "Prairie\t", "Pulaski\t", "Randolph", "Saline\t", "Scott\t", "Searcy\t",
+				"Sebastian", "Sevier\t", "Sharp\t", "St. Francis", "Stone\t", "Union\t", "Van Buren", "Washington",
+				"White\t", "Woodruff", "Yell"};
+		
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.print("How many columns?");
+		int columns;
+		int i=0;
+		columns = sc.nextInt();
+
+		for(int c = 0; c < counties.length; c++) {
+			System.out.print(counties[c] + "\t");
+			i++;
+			if (i == columns) {
+				i = 0;
+				System.out.println();
+			}
+		}
+	}
+}
