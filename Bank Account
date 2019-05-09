@@ -1,0 +1,52 @@
+
+public class Program {
+
+	public static void main(String[] args) {
+	
+		BankAccount myMoney = new BankAccount(500, 9999);
+		myMoney.withdraw(10, 9999);
+		myMoney.deposit(57);
+		
+	}
+}
+
+class BankAccount{
+	private double balance;
+	private int pin;
+	
+	public BankAccount(double startingBalance, int newPin) {
+		balance = startingBalance;
+		pin = newPin;
+	}
+	
+	public double getBalance() {
+		return balance;
+	}
+	public void withdraw(double amount, int p) {
+		if(p == pin) {
+			if (amount > 0) {
+				balance = balance - amount;
+				System.out.println("Money dispensed. New balance: $" + balance);
+			}
+			else {
+				System.out.println("Error: Amount must be greater than $0");
+			}
+		}	
+		else {
+			System.out.println("Error: PIN incorrect");
+		}
+		
+	}
+	
+	public void deposit(double am) {
+		if (am > 0) {
+			balance = balance + am;
+			System.out.println("Money deposited. New balance: $" + balance);
+		}
+		else {
+			System.out.println("Error: Amount must be greater than $0");
+		}
+	}
+}
+
+
