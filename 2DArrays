@@ -1,0 +1,22 @@
+
+public class Program {
+
+	public static void main(String[] args) {
+		int [][] values = {{17, 3, 88, 21, 20}, 
+						   {87, 40, 50, 2, 57},
+						   {99, 88, 66, 33, 0}};
+		
+		for (int r = 0; r < values.length; r++) {
+			for(int c = 0; c < values[0].length; c++) {
+				if (values[r][c] % 2 == 0)
+					System.out.print("E ");
+				else
+					System.out.print("0 ");
+				
+			}
+			System.out.println(); 
+		}
+
+	}
+
+}
