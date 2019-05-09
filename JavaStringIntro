@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class Program {
+
+	public static void main(String[] args) {
+		
+		String lastName = "Moix";
+		
+		Scanner sc = new Scanner(System.in); 
+		System.out.print("Enter your last name: ");
+		lastName = sc.nextLine();
+		
+		char initial = lastName.charAt(0);
+		
+		System.out.println("The inital for " + lastName + " is " + initial);
+		
+	}
+}
