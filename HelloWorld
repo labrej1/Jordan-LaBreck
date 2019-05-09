@@ -1,0 +1,17 @@
+
+public class Program {
+//public means that any other class can access it
+//class names always begin with a capital letter 
+	public static void main(String[] args) {
+	//snowMan(5,6);
+	//public means anyone can access it
+	/*Static means that you can run this method
+	 * without creating an instance of main
+	 */
+	/*void means that this method does not return a value*/
+	//main is the name of the method
+	//String[] args- and array of Strings
+		
+	}
+
+}
