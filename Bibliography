@@ -1,0 +1,96 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Scanner;
+
+public class Program {
+
+	public static void main(String[] args) {
+		//A special type of list that can hold Source objects
+		ArrayList sources = new ArrayList();
+		
+		//Connect to the keyboard
+		Scanner sc = new Scanner(System.in);
+		
+		//Some temporary variables
+		String input, f, l, t, c, p;
+		int y;
+		
+		do {
+			//Read in details about a source...
+			System.out.println("Enter source information:");
+			System.out.print("\tBook title:  ");
+			t = sc.nextLine();
+			
+			System.out.print("\tAuthor first name:  ");
+			f = sc.nextLine();
+			
+			System.out.print("\tAuthor last name:  ");
+			l = sc.nextLine();
+			
+			System.out.print("\tPublishing company:  ");
+			p = sc.nextLine();
+			
+			System.out.print("\tPublisher city:  ");
+			c = sc.nextLine();
+			
+			System.out.print("\tYear published:  ");
+			y = Integer.parseInt(sc.nextLine());
+			
+			//Create an Source object based on the values entered
+			Source s = new Source(l, f, t, c, p, y);
+			
+			//Add the new source our our list of sources
+			sources.add(s);
+			
+			System.out.println("Enter another source (Y or N)?");
+			input = sc.nextLine();
+			
+		}while(input.equalsIgnoreCase("Y"));
+		
+		//Put the list of sources in order based on author last name		
+		Collections.sort(sources);
+		
+		//Print out the list of sources
+		for(int i=0; i<sources.size(); i++) {
+			System.out.println(sources.get(i));
+		}
+	}
+}
+
+//Create a new class to hold bibliography sources.  It includes code that lets us sort it.
+class Source implements Comparable<Source>{
+	//Source information
+	String authorLast;
+	String authorFirst;
+	String bookTitle;
+	String publisherCity;
+	String publisherName;
+	int yearPublished;
+	
+	public Source(String last, String first, String title, String city, String publisher, int year) {
+		authorLast = last;
+		authorFirst = first;
+		bookTitle = title;
+		publisherCity = city;
+		publisherName = publisher;
+		yearPublished = year;
+	}
+	
+	//Returns the author info in "Last, First" format.
+	public String getAuthor() {
+		return authorLast + ", " + authorFirst;
+	}
+	
+	//Returns a text string representing this source.
+	public String toString() {
+		//Update this line to return (not print out) a String in MLA format.
+		return authorLast + ", " + authorFirst + ". " + bookTitle + ". " + publisherCity + ": " + publisherName + ", " + yearPublished + ". Print.";
+		
+	}
+	
+	//Specifies that sources are sorted by author.
+	public int compareTo(Source s) {
+		return getAuthor().compareTo(s.getAuthor());
+	}
+}
