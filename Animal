@@ -1,0 +1,64 @@
+public class Program {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Animal billy = new Animal();
+		
+		billy.type = "Horse";
+		billy.color = "Brown";
+		billy.feet = 4;
+		billy.canFly = false;
+		billy.age = 3;
+		billy.message = "Neigh";
+		billy.food = "Carrot";
+		
+		billy.speak();
+		billy.eat();
+		
+		Animal bobby = new Animal();
+		
+		bobby.type = "Rabbit";
+		bobby.color = "Black, White";
+		bobby.feet = 2;
+		bobby.canFly = false;
+		bobby.age = 1;
+		bobby.message = "Sqeak";
+		bobby.food = "Lettuce";
+		
+		bobby.speak();
+		bobby.eat();
+		
+		Animal robbie = new Animal();
+		
+		robbie.type =  "Dog";
+		robbie.color = "Gold";
+		robbie.feet = 2;
+		robbie.canFly = false;
+		robbie.age = 6;
+		robbie.message = "Ruff";
+		robbie.food = "Dog Food";
+		
+		robbie.speak();
+		robbie.eat();
+	}
+
+}
+
+class Animal {
+	String type;
+	String color;
+	int feet;
+	boolean canFly;
+	int age;
+	String message;
+	String food;
+
+	
+	public void speak() {
+		System.out.println(message);
+	}
+	public void eat() {
+		System.out.println("Eats "+ food);
+	}
+}
