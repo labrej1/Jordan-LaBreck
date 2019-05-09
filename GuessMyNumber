@@ -1,0 +1,37 @@
+import java.util.*;
+
+public class Program {
+
+	public static void main(String[] args) {
+		
+		//sets up the random number generator
+		Scanner sc = new Scanner(System.in);
+		Random rng = new Random();
+		int secret = rng.nextInt(100) + 1;
+		int guess;
+		
+		System.out.println("I'm thinking of a number 1 - 100.");
+		
+		System.out.print("Enter Guess:  ");
+		guess = sc.nextInt();
+		
+		while(guess != secret) {
+			//If guess is higher than the secret number,
+			//it will print out lower
+			if(guess > secret) {
+				System.out.println("Nope, lower.");
+				System.out.print("Guess Again:  ");
+				guess = sc.nextInt();
+			}
+			//If guess is lower than the secret number,
+			//it will print out higher
+			if(guess < secret) {
+				System.out.println("Nope, higher.");
+				System.out.print("Guess Again:  ");
+				guess = sc.nextInt();
+			}
+		}    
+		
+		System.out.println("You got it!");
+	}
+}
