@@ -1,0 +1,24 @@
+import java.io.File;
+import java.util.Scanner;
+
+public class Program {
+
+	public static void main(String[] args) {
+		
+		File f = new File("haiku.txt");
+		
+		try {
+			Scanner sc = new Scanner(f);
+			int lines = 0;
+			while(sc.hasNextLine()) {
+				System.out.println(sc.nextLine());
+			}
+		}
+		catch(Exception e) {
+			System.out.println(":(");
+		}
+		
+	}
+
+}
+//Five Seven Five
