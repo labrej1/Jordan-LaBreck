@@ -1,0 +1,27 @@
+import java.io.File;
+import java.util.Scanner;
+
+public class Program {
+
+	public static void main(String[] args) {
+		
+		File cookie = new File("fortune");
+		
+		try {
+			Scanner sc = new Scanner(cookie);
+			while(sc.hasNextLine()) {
+			
+				String fc = sc.nextLine();
+				if(fc.charAt(fc.length()-1) =='.') {
+					System.out.println(fc);
+				}
+				else if(fc.charAt(fc.length()-1) !='.') {
+					System.out.println(fc +".");
+				}
+			}
+		}
+		catch(Exception e) {
+			System.out.println("Error, cannot find file.");
+		}
+	}
+}
