@@ -1,0 +1,20 @@
+
+public class Program {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int x=-2, y=5, z=0, t=-4;
+		
+		System.out.println(x * t < z + 1);
+		System.out.println(x -2 * y + y < z * 2 / 3);
+		System.out.println(3 * y / 4 < 8 && y >= 4);
+		System.out.println(t > 5 || z < 2);
+		System.out.println(x * y < 10 || y * z < 10);
+		System.out.println((y + 2) / 3 > 3 && t < 0);
+		System.out.println(!(x > 0));
+		System.out.println(!(x * t < 10) || y / x * t < y * 2);
+		System.out.println(t > 5 || z < (y+ 5) && y < 3);
+		System.out.println(x * 3 > 0 || y + 5 / t < 2);	
+	}
+
+}
