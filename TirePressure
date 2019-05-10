@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class Program {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		//Scanner sc = new Scanner(System.in);
+		//System.out.println("Enter tire pressure: ");
+		//int tirePressure = sc.nextInt();
+		
+		//if (tirePressure < 25) {
+			//System.out.println("TIRE LOW!");
+			
+		Scanner sc = new Scanner(System.in);	
+		System.out.println("Enter the front left tire pressure in PSI ");
+		int fl = sc.nextInt();
+		
+		System.out.println("Enter the front right tire pressure in PSI: ");
+		int fr = sc.nextInt();
+		
+		System.out.println("Enter the rear left tire pressure in PSI: ");
+		int rl = sc.nextInt();
+		
+		System.out.println("Enter the rear right tire pressure in PSI: ");
+		int rr = sc.nextInt();
+		
+		if (fl < 25 || fr < 25 || rl < 25 || rr < 25) {
+			System.out.println("TIRE LOW!");
+		}
+		
+		
+		
+		
+		
+		
+	}
+}
