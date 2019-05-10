@@ -1,0 +1,35 @@
+
+public class Program {
+
+	public static void main(String[] args) {
+		
+		Square a = new Square();
+		Square b = new Square();
+		
+		a.side = 5;
+		b.side = 10;
+		
+		System.out.println(a.getArea());
+		System.out.println(a.getPerimeter());
+		
+		System.out.println(b.getArea());
+		System.out.println(b.getPerimeter());
+		
+		
+	}
+
+}
+
+class Square {
+	double side;
+	
+	
+	public double getArea() {
+		return side * side;
+	}
+	
+	public double getPerimeter() {
+		return side * 4;
+	}
+	
+}
