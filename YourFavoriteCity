@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Program {
+
+	public static void main(String[] args) {
+			/*Set up scanner
+			 * Ask user for their fav city
+			 * create a string variable
+			 * store user input into string variable
+			 * print out the strings length
+			 * print out the string in all upper case
+			 * print out the string in all lowercase
+			 * print out the first letter
+			 * print out the last three letters
+			 */
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("What is your favorite city?");
+		String city = "M";
+		city = sc.nextLine();
+		
+		System.out.println("The word length of your city is " + (city.length()));
+		System.out.println(city.toUpperCase());
+		System.out.println(city.toLowerCase());
+		char firstLetter = city.charAt(0);
+		System.out.println(firstLetter);
+		System.out.println(city.substring(city.length()-3));
+	}
+
+}
