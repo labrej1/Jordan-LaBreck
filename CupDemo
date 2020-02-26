@@ -1,0 +1,23 @@
+public class CupDemo {  
+	public static void main (String args []) {  
+		
+		double capacity;
+	 	double amount;
+		String color;
+		
+		//make a red and blue cup
+		Cup redCup = new Cup();
+		Cup blueCup = new Cup(20, "blue");
+		
+		//fill the red and blue cup with 20oz
+		redCup.fillCup(20);
+		blueCup.fillCup(20);
+		
+		//six gulps from red cup
+		for (int i = 0; i < 6; i++) {
+		redCup.gulp();
+		}
+		System.out.println(redCup);
+		
+	}    
+}
