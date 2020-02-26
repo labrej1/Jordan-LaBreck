@@ -1,0 +1,58 @@
+public class Cup{ 
+	// data member  
+	private double capacity; 
+	private double amount;
+	private String color;
+	
+	//constructors
+	public Cup() {
+		capacity = 20;
+		color = "red";
+		amount = 0;
+	}
+	
+	public Cup(double cap, String col) {
+		capacity = cap;
+		color = col;
+		amount = 0;
+	}
+	
+	public Cup (Cup c) {
+		capacity = c.capacity;
+		color = c.color;
+		amount = c.amount;
+	}
+	
+	public double getCapacity ( ) {
+		return capacity;
+	}
+	
+	public double getAmount ( ) {
+		return amount;
+	}
+	
+	public String getColor ( ) {
+		return color;
+	}
+	
+	public void fillCup (double amt) {
+		amount = amount + amt; 
+		//amount += amt;
+	}
+	
+	public void sip () {
+		amount = amount - 1;
+	}
+	
+	public void gulp () {
+		amount = amount - 3;
+	}
+	
+	public void emptyCup () {
+		amount = 0;
+	}
+	
+	public String toString () {
+		return "A " + color + " " + capacity + " ounce cup that contains " + amount + " ounces.";
+	}
+}
