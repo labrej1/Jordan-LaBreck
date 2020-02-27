@@ -17,7 +17,35 @@ public class CupDemo {
 		for (int i = 0; i < 6; i++) {
 		redCup.gulp();
 		}
+		
+		//print redCup
 		System.out.println(redCup);
+		
+		//two sips and a gulp blue cup
+		blueCup.sip();
+		blueCup.sip();
+		blueCup.gulp();
+		
+		//add 6 ounces to blue cup
+		blueCup.fillCup(6);
+		
+		//print blueCup
+		System.out.println(blueCup);
+		
+		//empty red cup
+		redCup.emptyCup();
+		
+		//fill red cup with 5 ounces
+		redCup.fillCup(5);
+		
+		//two gulps for red cup
+		redCup.gulp();
+		redCup.gulp();
+		
+		//print red cup
+		System.out.println(redCup);
+		
+		
 		
 	}    
 }
