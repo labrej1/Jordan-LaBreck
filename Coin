@@ -1,0 +1,28 @@
+import java.util.*;
+public class Coin {
+	private int s;
+	
+	/* Jordan LaBreck
+	 * Calvert
+	 * March 5
+	 */
+	public Coin () { //sets up side of coin
+		s = 0;
+	}
+	
+	public String toString () {
+		
+		if (s == 1) { //sees if coin equals that number
+			
+			return "Heads!";
+		}
+		
+		return "Tails!";
+	}
+	
+	public void flipCoin () {
+		
+		s = (int)(Math.random() * 2);
+	}
+	
+}
